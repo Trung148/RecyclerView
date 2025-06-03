@@ -37,4 +37,5 @@
         android:maxLines="2"
         android:ellipsize="end" />
 
+
 </LinearLayout>

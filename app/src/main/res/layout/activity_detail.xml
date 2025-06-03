@@ -41,5 +41,14 @@
         android:textColor="@android:color/white"
         android:backgroundTint="#C8102E"
         android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/btn_call_distributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Distributor"
+        android:textColor="#C8102E"
+        android:drawableLeft="@android:drawable/ic_menu_call"
+
+    android:layout_marginTop="8dp"/>
 
 </LinearLayout>

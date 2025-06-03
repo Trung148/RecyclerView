@@ -9,12 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ProductAdapter(
     private val products: List<Product>,
-    private val onItemClick: (Product) -> Unit
+    private val onItemClick: (Product) -> Unit,
+    private val onCallClick: (String) -> Unit // Add this callback
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val iconImageView: ImageView = itemView.findViewById(R.id.iv_product_icon)
         val nameTextView: TextView = itemView.findViewById(R.id.tv_product_name)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -25,13 +27,10 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = products[position]
-
         holder.iconImageView.setImageResource(product.iconResId)
         holder.nameTextView.text = product.name
 
-        holder.itemView.setOnClickListener {
-            onItemClick(product)
-        }
+        holder.itemView.setOnClickListener { onItemClick(product) }
     }
 
     override fun getItemCount(): Int = products.size

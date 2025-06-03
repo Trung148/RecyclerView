@@ -13,12 +13,14 @@
         android:background="#C8102E"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:padding="16dp"
         android:paddingHorizontal="16dp">
 
         <ImageView
+            android:id="@+id/imgMenu"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:src="@drawable/menu"
             app:tint="@android:color/white" />
 
         <TextView
@@ -34,14 +36,14 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_search"
+            android:src="@drawable/search"
             app:tint="@android:color/white"
             android:layout_marginEnd="16dp" />
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_add"
+            android:src="@drawable/cart2"
             app:tint="@android:color/white" />
 
     </LinearLayout>

@@ -63,6 +63,11 @@ class HomeActivity : AppCompatActivity() {
 
             popup.show()
         }
+        val imgCart = findViewById<ImageView>(R.id.imgCart)
+        imgCart.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupRecyclerView() {
